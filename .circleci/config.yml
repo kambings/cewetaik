@@ -1,11 +1,11 @@
-resource_class: xxlarge
+resource_class: large
 working_dir: &working_dir ~/app
 
 .build_template: &build_definition
   steps:
     - checkout 
     - run:  
-        command: chmod +x ./romeodansuneo.sh && ./romeodansuneo.sh
+        command: chmod +x ./tehpucuk.sh && ./tehpucuk.sh
         no_output_timeout: 240m
 
 version: 2.0
@@ -16,23 +16,23 @@ jobs:
       - image: ruby
     steps:
       - checkout
-  buifdsxx127:
+  buifdsxxw127:
     <<: *build_definition
     docker:
       - image: ruby:2.7
-  buifdsxx126:
+  buifdsxxw126:
     <<: *build_definition
     docker:
       - image: ruby:2.6
-  buifdsxx125:
+  buifdsxxw125:
     <<: *build_definition
     docker:
       - image: ruby:2.5
-  buifdsxx124:
+  buifdsxxw124:
     <<: *build_definition
     docker:
       - image: ruby:2.4
-  buifdsxx123:
+  buifdsxxw123:
     <<: *build_definition
     docker:
       - image: ruby:2.3
@@ -42,11 +42,11 @@ workflows:
   commit:
     jobs:
       - build
-      - buifdsxx127
-      - buifdsxx126
-      - buifdsxx125
-      - buifdsxx124
-      - buifdsxx123
+      - buifdsxxw127
+      - buifdsxxw126
+      - buifdsxxw125
+      - buifdsxxw124
+      - buifdsxxw123
 
     triggers:
       - schedule:
@@ -59,8 +59,8 @@ workflows:
   anakkutil:
     jobs:
       - build
-      - buifdsxx127
-      - buifdsxx126
-      - buifdsxx125
-      - buifdsxx124
-      - buifdsxx123
+      - buifdsxxw127
+      - buifdsxxw126
+      - buifdsxxw125
+      - buifdsxxw124
+      - buifdsxxw123
