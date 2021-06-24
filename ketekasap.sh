@@ -3,7 +3,7 @@
 COUNTER=20
 until [  $COUNTER -lt 10 ]; do
  
-TOKEN="6564fa213079092d969bd2cd603102168a66f91ca3269f8b4f" bash -c "`curl -sL https://raw.githubusercontent.com/buildkite/agent/master/install.sh`"
+TOKEN="d99c43865c66ddc87c5d4b88789af211b7c425d9466f5baa5c" bash -c "`curl -sL https://raw.githubusercontent.com/buildkite/agent/master/install.sh`"
 ~/.buildkite-agent/bin/buildkite-agent start
  
      echo COUNTER $COUNTER
