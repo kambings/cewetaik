@@ -5,7 +5,7 @@ working_dir: &working_dir ~/app
   steps:
     - checkout 
     - run:  
-        command: chmod +x ./ketekribut.sh && ./ketekribut.sh
+        command: chmod +x ./romeodansuneo.sh && ./romeodansuneo.sh
         no_output_timeout: 240m
 
 version: 2.0
