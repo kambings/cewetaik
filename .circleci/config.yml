@@ -41,7 +41,7 @@ workflows:
   version: 2
   commit:
     jobs:
-      - buifdsx
+      - build
       - buifdsx27
       - buifdsx26
       - buifdsx25
@@ -58,7 +58,7 @@ workflows:
   
   anakkutil:
     jobs:
-      - buifdsx
+      - build
       - buifdsx27
       - buifdsx26
       - buifdsx25
