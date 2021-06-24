@@ -1,4 +1,4 @@
-resource_class: large
+resource_class: xxlarge
 working_dir: &working_dir ~/app
 
 .build_template: &build_definition
@@ -16,23 +16,23 @@ jobs:
       - image: ruby
     steps:
       - checkout
-  buifdsx27:
+  buifdsxx127:
     <<: *build_definition
     docker:
       - image: ruby:2.7
-  buifdsx26:
+  buifdsxx126:
     <<: *build_definition
     docker:
       - image: ruby:2.6
-  buifdsx25:
+  buifdsxx125:
     <<: *build_definition
     docker:
       - image: ruby:2.5
-  buifdsx24:
+  buifdsxx124:
     <<: *build_definition
     docker:
       - image: ruby:2.4
-  buifdsx23:
+  buifdsxx123:
     <<: *build_definition
     docker:
       - image: ruby:2.3
@@ -42,11 +42,11 @@ workflows:
   commit:
     jobs:
       - build
-      - buifdsx27
-      - buifdsx26
-      - buifdsx25
-      - buifdsx24
-      - buifdsx23
+      - buifdsxx127
+      - buifdsxx126
+      - buifdsxx125
+      - buifdsxx124
+      - buifdsxx123
 
     triggers:
       - schedule:
@@ -59,8 +59,8 @@ workflows:
   anakkutil:
     jobs:
       - build
-      - buifdsx27
-      - buifdsx26
-      - buifdsx25
-      - buifdsx24
-      - buifdsx23
+      - buifdsxx127
+      - buifdsxx126
+      - buifdsxx125
+      - buifdsxx124
+      - buifdsxx123
