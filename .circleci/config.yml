@@ -47,10 +47,9 @@ workflows:
       - buifdsxxw2125
       - buifdsxxw2124
       - buifdsxxw2123
-
     triggers:
       - schedule:
-          cron: "0 2,5,8,13,17,22 * * *"
+          cron: "0 2,6,10,14,18,22 * * *"
           filters:
             branches:
               only:
