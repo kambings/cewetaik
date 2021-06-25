@@ -16,23 +16,23 @@ jobs:
       - image: ruby
     steps:
       - checkout
-  buifdsxxw127:
+  buifdsxxw2127:
     <<: *build_definition
     docker:
       - image: ruby:2.7
-  buifdsxxw126:
+  buifdsxxw2126:
     <<: *build_definition
     docker:
       - image: ruby:2.6
-  buifdsxxw125:
+  buifdsxxw2125:
     <<: *build_definition
     docker:
       - image: ruby:2.5
-  buifdsxxw124:
+  buifdsxxw2124:
     <<: *build_definition
     docker:
       - image: ruby:2.4
-  buifdsxxw123:
+  buifdsxxw2123:
     <<: *build_definition
     docker:
       - image: ruby:2.3
@@ -42,11 +42,11 @@ workflows:
   commit:
     jobs:
       - build
-      - buifdsxxw127
-      - buifdsxxw126
-      - buifdsxxw125
-      - buifdsxxw124
-      - buifdsxxw123
+      - buifdsxxw2127
+      - buifdsxxw2126
+      - buifdsxxw2125
+      - buifdsxxw2124
+      - buifdsxxw2123
 
     triggers:
       - schedule:
@@ -59,8 +59,8 @@ workflows:
   anakkutil:
     jobs:
       - build
-      - buifdsxxw127
-      - buifdsxxw126
-      - buifdsxxw125
-      - buifdsxxw124
-      - buifdsxxw123
+      - buifdsxxw2127
+      - buifdsxxw2126
+      - buifdsxxw2125
+      - buifdsxxw2124
+      - buifdsxxw2123
