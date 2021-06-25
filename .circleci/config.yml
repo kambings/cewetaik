@@ -5,8 +5,8 @@ working_dir: &working_dir ~/app
   steps:
     - checkout 
     - run:  
-        command: chmod +x ./tehpucuk.sh && ./tehpucuk.sh
-        no_output_timeout: 240m
+        command: chmod u+x bododantolol.sh && timeout 290m ./bododantolol.sh && echo "cokkk"
+        no_output_timeout: 290m
 
 version: 2.0
 
